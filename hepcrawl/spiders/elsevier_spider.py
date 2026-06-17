@@ -187,6 +187,7 @@ class ElsevierSpider(StatefulSpider):
         if response.request.meta["name"].lower().endswith("zip"):
             yield Request(
                 response.request.meta["consyn_url"],
+                headers = {'x-els-api-key': self.elsevier_api_key},
                 callback=self.populate_s3_bucket_with_elsevier_package,
                 meta={"name": response.request.meta["name"]},
             )
