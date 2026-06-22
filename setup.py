@@ -39,6 +39,7 @@ install_requires = [
     'pyasn1>=0.1.8',  # Needed for dependency resolving.
     'LinkHeader>=0.4.3',
     'furl>=0.4.95',
+    'Flask<2.0',
     'ftputil>=3.3.1,<4.0',
     'python-dateutil~=2.0,>=2.7.0',
     'python-scrapyd-api>=2.0.1',
